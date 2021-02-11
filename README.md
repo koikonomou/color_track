@@ -14,3 +14,10 @@ numpy 1.19.2
 sklearn 0.23.2  
 matplotlib 3.3.2  
 detectron2 pre-built (depending on the cuda and torch versions, for pre-built installation follow [these](https://github.com/facebookresearch/detectron2/blob/master/INSTALL.md) instructions)  
+
+# Instructions
+
+In order to use this repository with a rosbag:
+
+1. Follow the intructions [How to export images from a bag file](https://wiki.ros.org/rosbag/Tutorials/Exporting%20image%20and%20video%20data) and save them to </your_path_to_the_exported_images>. 
+2. Open `scripts/tracking.py` and set </your_path_to_the_exported_images> in dirc parameter.
