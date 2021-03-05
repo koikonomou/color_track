@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<launch>
+<!-- 	<arg name="rosbag"  default="/rosbags/2.bag"/>
+	<node pkg="rosbag" type="play" name="player" output="screen" args="clock $(arg rosbag)"/> -->
+	<arg name="rgb_topic"  default="/camera/rgb/image_raw"/>
+	<node name="extract" pkg="image_view" type="extract_images" respawn="false" required="true" output="screen" cwd="ROS_HOME">
+	<remap from="image" to="$(arg rgb_topic)"/>
+  	</node>
+</launch>
